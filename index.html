@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>server.properties generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Darkly theme from https://bootswatch.com/ -->
+        <link rel="stylesheet" href="bootstrap.min.css" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="highlighter/styles/atom-one-dark.css">
+        <script src="highlighter/highlight.pack.js"></script>
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm">
+                    <h3>Allow flight</h3>
+                    <btnToggle id="allow-flight" class="property-button"></btnToggle>
+
+                    <h3>Allow nether</h3>
+                    <btnToggle on id="allow-nether" class="property-button"></btnToggle>
+
+                    <h3>Difficulty</h3>
+                    <btnChoice id="difficulty" class="property-button">
+                        <choice>Peaceful</choice>
+                        <choice default>Easy</choice>
+                        <choice>Normal</choice>
+                        <choice>Hard</choice>
+                    </btnChoice>
+                </div>
+                <div class="col-sm">
+                    <pre><code class="properties" id="server-properties">Loading...</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+        <script src="main.js"></script>
+    </body>
+</html>
