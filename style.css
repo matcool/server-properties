@@ -1,0 +1,13 @@
+#server-properties-parent {
+    position: sticky;
+    top: 0px;
+}
+#server-properties-parent div {
+    display:flex;
+    align-items:center;
+    height:100%;
+}
+#server-properties-parent thing {
+    margin-top: 50vh;
+    transform: translateY(-70%);
+}

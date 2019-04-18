@@ -35,7 +35,6 @@ for (let btn of document.querySelectorAll('btnChoice')) {
     btn.children[0].children[0].innerHTML = btn.selected.innerHTML;
     for (let choice of choices) {
         let option = document.createElement('a');
-        option.href = '#';
         option.classList.add('dropdown-item');
         option.innerHTML = choice.innerHTML;
         option.onclick = () => {
