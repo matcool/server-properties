@@ -31,6 +31,50 @@
                         <choice value=2>Normal</choice>
                         <choice value=3>Hard</choice>
                     </btnChoice>
+
+                    <h3>Enable query</h3>
+                    <btnToggle id="enable-query" class="property-button"></btnToggle>
+
+                    <h3>Enable remote connection</h3>
+                    <btnToggle id="enable-rcon" class="property-button"></btnToggle>
+
+                    <h3>Enable command blocks</h3>
+                    <btnToggle id="enable-command-block" class="property-button"></btnToggle>
+
+                    <h3>Force gamemode</h3>
+                    <btnToggle id="force-gamemode" class="property-button"></btnToggle>
+
+                    <h3>Gamemode</h3>
+                    <btnChoice id="gamemode" class="property-button">
+                        <choice value=0 default>Survival</choice>
+                        <choice value=1>Creative</choice>
+                        <choice value=2>Adventure</choice>
+                        <choice value=3>Spectator</choice>
+                    </btnChoice>
+
+                    <h3>Generate structures</h3>
+                    <btnToggle on id="generate-structures" class="property-button"></btnToggle>
+
+                    <h3>Generator settings</h3>
+                    <input type="text" id="generator-settings" class="property-button"></input>
+
+                    <h3>Hardcore</h3>
+                    <btnToggle id="hardcore" class="property-button"></btnToggle>
+
+                    <h3>World name</h3>
+                    <input type="text" id="level-name" value="world" class="property-button"></input>
+
+                    <h3>World seed</h3>
+                    <input type="text" id="level-seed" class="property-button"></input>
+
+                    <h3>World type</h3>
+                    <btnChoice id="level-type" class="property-button">
+                        <choice value="DEFAULT" default>Default</choice>
+                        <choice value="FLAT">Superflat</choice>
+                        <choice value="LARGEBIOMES">Large biomes</choice>
+                        <choice value="AMPLIFIED">Amplified</choice>
+                        <choice value="BUFFET">Buffet</choice>
+                    </btnChoice>
                 </div>
                 <div class="col-sm">
                     <div id="server-properties-parent">

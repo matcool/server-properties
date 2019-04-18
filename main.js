@@ -46,9 +46,12 @@ for (let btn of document.querySelectorAll('btnChoice')) {
 }
 
 for (let btn of document.getElementsByClassName('property-button')) {
-    let orig = btn.onclick;
+    let func;
+    if (btn.nodeName == 'INPUT') func = 'oninput';
+    else func = 'onclick';
+    let orig = btn[func];
     if (!isFunction(orig)) orig = () => {};
-    btn.onclick = () => {
+    btn[func] = () => {
         orig();
         updateProperties();
     };
@@ -62,6 +65,8 @@ function updateProperties() {
             properties[key] = btn.pressed;
         } else if (btn.nodeName == 'BTNCHOICE') {
             properties[key] = btn.selected.attributes.value.value;
+        } else if (btn.nodeName == 'INPUT') {
+            properties[key] = btn.value;
         }
     }
     updateCode();
