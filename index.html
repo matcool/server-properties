@@ -75,6 +75,50 @@
                         <choice value="AMPLIFIED">Amplified</choice>
                         <choice value="BUFFET">Buffet</choice>
                     </btnChoice>
+
+                    <h3>Max build height</h3>
+                    <input type="number" id="max-build-height" ivalue=256 class="property-button"></input>
+
+                    <h3>Max players</h3>
+                    <input type="number" id="max-players" ivalue=20 class="property-button"></input>
+
+                    <h3>Max tick time</h3>
+                    <input type="number" id="max-tick-time" ivalue=60000 class="property-button"></input>
+
+                    <h3>Max world size</h3>
+                    <input type="number" id="max-world-size" ivalue=29999984 class="property-button"></input>
+
+                    <h3>Server list message</h3>
+                    <input type="text" id="motd" value="A Minecraft Server" class="property-button"></input>
+
+                    <h3>Network compression threshold</h3>
+                    <input type="number" id="network-compression-threshold" ivalue=256 class="property-button"></input>
+
+                    <h3>Online mode</h3>
+                    <btnToggle on id="online-mode" class="property-button"></btnToggle>
+
+                    <h3>Op permission level</h3>
+                    <btnChoice id="op-permission-level" class="property-button">
+                        <choice value=1>Bypass spawn protection</choice>
+                        <choice value=2>Medium</choice>
+                        <choice value=3>Admin</choice>
+                        <choice value=4 default>All commands</choice>
+                    </btnChoice>
+
+                    <h3>Player idle timeout</h3>
+                    <input type="number" id="player-idle-timeout" ivalue=0 class="property-button"></input>
+
+                    <h3>Prevent proxy connections</h3>
+                    <btnToggle id="prevent-proxy-connections" class="property-button"></btnToggle>
+
+                    <h3>PVP</h3>
+                    <btnToggle on id="pvp" class="property-button"></btnToggle>
+
+                    <h3>Server IP</h3>
+                    <input type="text" id="server-ip" class="property-button"></input>
+
+                    <h3>Server port</h3>
+                    <input type="number" id="server-port" ivalue=25565 class="property-button"></input>
                 </div>
                 <div class="col-sm">
                     <div id="server-properties-parent">

@@ -1,6 +1,7 @@
 #server-properties-parent {
     position: sticky;
     top: 0px;
+    width: 50%;
 }
 #server-properties-parent div {
     display:flex;

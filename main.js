@@ -1,8 +1,8 @@
 function isFunction(functionToCheck) {
     return functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
 }
-function hasAttribute(attrlist, attr) {
-    return attrlist[attr] !== undefined;
+function hasAttribute(element, attr) {
+    return element.attributes[attr] !== undefined;
 }
 
 for (let btn of document.querySelectorAll('btnToggle')) {
@@ -23,7 +23,7 @@ for (let btn of document.querySelectorAll('btnChoice')) {
     for (let child of btn.children) {
         if (child.nodeName == 'CHOICE') {
             choices.push(child);
-            if (hasAttribute(child.attributes, 'default')) btn.selected = child;
+            if (hasAttribute(child, 'default')) btn.selected = child;
         }
     }
     btn.innerHTML = `<div class="dropdown">
@@ -42,6 +42,12 @@ for (let btn of document.querySelectorAll('btnChoice')) {
             btn.children[0].children[0].innerHTML = btn.selected.innerHTML;
         };
         btn.children[0].children[1].appendChild(option);
+    }
+}
+
+for (let ipt of document.querySelectorAll('input')) {
+    if (ipt.type === 'number' && hasAttribute(ipt, 'ivalue')) {
+        ipt.value = Number(ipt.attributes.ivalue.value);
     }
 }
 
