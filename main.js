@@ -1,6 +1,7 @@
 function isFunction(functionToCheck) {
     return functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
 }
+
 function hasAttribute(element, attr) {
     return element.attributes[attr] !== undefined;
 }
@@ -93,3 +94,22 @@ function updateCode() {
 }
 
 updateProperties();
+
+{
+    let btn = document.getElementById('toggle-advanced');
+    let updateElements = () => {
+        for (let element of document.getElementsByClassName('advanced')) {
+            if (btn.pressed) {
+                element.style.display = '';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    }
+    updateElements();
+    let orig = btn.onclick;
+    btn.onclick = () => {
+        orig();
+        updateElements();
+    }
+}

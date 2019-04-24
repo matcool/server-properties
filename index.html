@@ -15,58 +15,30 @@
     </head>
     
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm">
-                    <h3>Allow flight</h3>
-                    <btnToggle id="allow-flight" class="property-button"></btnToggle>
 
-                    <h3>Allow nether</h3>
-                    <btnToggle on id="allow-nether" class="property-button"></btnToggle>
+    <h5>Toggle advanced</h5>
+    <btnToggle id="toggle-advanced"></btnToggle>
 
-                    <h3>Difficulty</h3>
-                    <btnChoice id="difficulty" class="property-button">
-                        <choice value=0>Peaceful</choice>
-                        <choice value=1 default>Easy</choice>
-                        <choice value=2>Normal</choice>
-                        <choice value=3>Hard</choice>
-                    </btnChoice>
-
-                    <h3>Enable query</h3>
-                    <btnToggle id="enable-query" class="property-button"></btnToggle>
-
-                    <h3>Enable remote connection</h3>
-                    <btnToggle id="enable-rcon" class="property-button"></btnToggle>
-
-                    <h3>Enable command blocks</h3>
-                    <btnToggle id="enable-command-block" class="property-button"></btnToggle>
-
-                    <h3>Force gamemode</h3>
-                    <btnToggle id="force-gamemode" class="property-button"></btnToggle>
-
-                    <h3>Gamemode</h3>
-                    <btnChoice id="gamemode" class="property-button">
-                        <choice value=0 default>Survival</choice>
-                        <choice value=1>Creative</choice>
-                        <choice value=2>Adventure</choice>
-                        <choice value=3>Spectator</choice>
-                    </btnChoice>
-
-                    <h3>Generate structures</h3>
-                    <btnToggle on id="generate-structures" class="property-button"></btnToggle>
-
-                    <h3>Generator settings</h3>
-                    <input type="text" id="generator-settings" class="property-button"></input>
-
-                    <h3>Hardcore</h3>
-                    <btnToggle id="hardcore" class="property-button"></btnToggle>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <div>
+                    <h3>Server IP</h3>
+                    <input type="text" id="server-ip" class="property-button"></input>
+                </div>
+                <div>
+                    <h3>Server port</h3>
+                    <input type="number" id="server-port" ivalue=25565 class="property-button"></input>
+                </div>
+                <div>
                     <h3>World name</h3>
                     <input type="text" id="level-name" value="world" class="property-button"></input>
-
+                </div>
+                <div>
                     <h3>World seed</h3>
                     <input type="text" id="level-seed" class="property-button"></input>
-
+                </div>
+                <div>
                     <h3>World type</h3>
                     <btnChoice id="level-type" class="property-button">
                         <choice value="DEFAULT" default>Default</choice>
@@ -75,28 +47,90 @@
                         <choice value="AMPLIFIED">Amplified</choice>
                         <choice value="BUFFET">Buffet</choice>
                     </btnChoice>
-
-                    <h3>Max build height</h3>
-                    <input type="number" id="max-build-height" ivalue=256 class="property-button"></input>
-
-                    <h3>Max players</h3>
-                    <input type="number" id="max-players" ivalue=20 class="property-button"></input>
-
-                    <h3>Max tick time</h3>
-                    <input type="number" id="max-tick-time" ivalue=60000 class="property-button"></input>
-
-                    <h3>Max world size</h3>
-                    <input type="number" id="max-world-size" ivalue=29999984 class="property-button"></input>
-
-                    <h3>Server list message</h3>
-                    <input type="text" id="motd" value="A Minecraft Server" class="property-button"></input>
-
-                    <h3>Network compression threshold</h3>
-                    <input type="number" id="network-compression-threshold" ivalue=256 class="property-button"></input>
-
+                </div>
+                <div>
+                    <h3>Generator settings</h3>
+                    <input type="text" id="generator-settings" class="property-button"></input>
+                </div>
+                <div>
+                    <h3>Generate structures</h3>
+                    <btnToggle on id="generate-structures" class="property-button"></btnToggle>
+                </div>
+                <div>
+                    <h3>Difficulty</h3>
+                    <btnChoice id="difficulty" class="property-button">
+                        <choice value=0>Peaceful</choice>
+                        <choice value=1 default>Easy</choice>
+                        <choice value=2>Normal</choice>
+                        <choice value=3>Hard</choice>
+                    </btnChoice>
+                </div>
+                <div>
+                    <h3>Hardcore</h3>
+                    <btnToggle id="hardcore" class="property-button"></btnToggle>
+                </div>
+                <div>
+                    <h3>Gamemode</h3>
+                    <btnChoice id="gamemode" class="property-button">
+                        <choice value=0 default>Survival</choice>
+                        <choice value=1>Creative</choice>
+                        <choice value=2>Adventure</choice>
+                        <choice value=3>Spectator</choice>
+                    </btnChoice>
+                </div>
+                <div class="advanced">
+                    <h3>Force gamemode</h3>
+                    <btnToggle id="force-gamemode" class="property-button"></btnToggle>
+                </div>
+                <div>
                     <h3>Online mode</h3>
                     <btnToggle on id="online-mode" class="property-button"></btnToggle>
-
+                </div>
+                <div>
+                    <h3>Max players</h3>
+                    <input type="number" id="max-players" ivalue=20 class="property-button"></input>
+                </div>
+                <div>
+                    <h3>Spawn protection</h3>
+                    <input type="number" id="spawn-protection" ivalue=16 class="property-button"></input>
+                </div>
+                <div>
+                    <h3>Server list message</h3>
+                    <input type="text" id="motd" value="A Minecraft Server" class="property-button"></input>
+                </div>
+                <div>
+                    <h3>PVP</h3>
+                    <btnToggle on id="pvp" class="property-button"></btnToggle>
+                </div>
+                <div>
+                    <h3>Allow nether</h3>
+                    <btnToggle on id="allow-nether" class="property-button"></btnToggle>
+                </div>
+                <div>
+                    <h3>Allow flight</h3>
+                    <btnToggle id="allow-flight" class="property-button"></btnToggle>
+                </div>
+                <div>
+                    <h3>Resource pack link</h3>
+                    <input type="text" id="resource-pack" class="property-button"></input>
+                </div>
+                <div class="advanced">
+                    <h3>Resource pack sha1 hash</h3>
+                    <input type="text" id="resource-pack-sha1" class="property-button"></input>
+                </div>
+                <div class="advanced">
+                    <h3>Enable query</h3>
+                    <btnToggle id="enable-query" class="property-button"></btnToggle>
+                </div>
+                <div class="advanced">
+                    <h3>Enable remote connection</h3>
+                    <btnToggle id="enable-rcon" class="property-button"></btnToggle>
+                </div>
+                <div>
+                    <h3>Enable command blocks</h3>
+                    <btnToggle id="enable-command-block" class="property-button"></btnToggle>
+                </div>
+                <div>
                     <h3>Op permission level</h3>
                     <btnChoice id="op-permission-level" class="property-button">
                         <choice value=1>Bypass spawn protection</choice>
@@ -104,68 +138,76 @@
                         <choice value=3>Admin</choice>
                         <choice value=4 default>All commands</choice>
                     </btnChoice>
-
-                    <h3>Player idle timeout</h3>
-                    <input type="number" id="player-idle-timeout" ivalue=0 class="property-button"></input>
-
-                    <h3>Prevent proxy connections</h3>
-                    <btnToggle id="prevent-proxy-connections" class="property-button"></btnToggle>
-
-                    <h3>PVP</h3>
-                    <btnToggle on id="pvp" class="property-button"></btnToggle>
-
-                    <h3>Resource pack link</h3>
-                    <input type="text" id="resource-pack" class="property-button"></input>
-
-                    <h3>Resource pack sha1 hash</h3>
-                    <input type="text" id="resource-pack-sha1" class="property-button"></input>
-
-                    <h3>Server IP</h3>
-                    <input type="text" id="server-ip" class="property-button"></input>
-
-                    <h3>Server port</h3>
-                    <input type="number" id="server-port" ivalue=25565 class="property-button"></input>
-
-                    <h3>Snooper enabled</h3>
-                    <btnToggle on id="snooper-enabled" class="property-button"></btnToggle>
-
+                </div>
+                <div>
                     <h3>Spawn animals</h3>
                     <btnToggle on id="spawn-animals" class="property-button"></btnToggle>
-
+                </div>
+                <div>
                     <h3>Spawn monsters</h3>
                     <btnToggle on id="spawn-monsters" class="property-button"></btnToggle>
-
+                </div>
+                <div>
                     <h3>Spawn villagers</h3>
                     <btnToggle on id="spawn-npcs" class="property-button"></btnToggle>
-
-                    <h3>Spawn protection</h3>
-                    <input type="number" id="spawn-protection" ivalue=16 class="property-button"></input>
-
+                </div>
+                <div>
                     <h3>View distance</h3>
                     <input type="number" id="view-distance" ivalue=10 class="property-button"></input>
-
+                </div>
+                <div>
                     <h3>Whitelist</h3>
                     <btnToggle id="whitelist" class="property-button"></btnToggle>
-
+                </div>
+                <div class="advanced">
                     <h3>Enforce whitelist</h3>
                     <btnToggle id="enforce-whitelist" class="property-button"></btnToggle>
                 </div>
-                <div class="col-sm">
-                    <div id="server-properties-parent">
-                        <div>
-                            <thing>
-                                <pre><code class="properties" id="server-properties">Loading...</code></pre>
-                            </thing>
-                        </div>
+                <div class="advanced">
+                    <h3>Max build height</h3>
+                    <input type="number" id="max-build-height" ivalue=256 class="property-button"></input>
+                </div>
+                <div class="advanced">
+                    <h3>Max tick time</h3>
+                    <input type="number" id="max-tick-time" ivalue=60000 class="property-button"></input>
+                </div>
+                <div class="advanced">
+                    <h3>Max world size</h3>
+                    <input type="number" id="max-world-size" ivalue=29999984 class="property-button"></input>
+                </div>
+                <div class="advanced">
+                    <h3>Network compression threshold</h3>
+                    <input type="number" id="network-compression-threshold" ivalue=256 class="property-button"></input>
+                </div>
+                <div class="advanced">
+                    <h3>Player idle timeout</h3>
+                    <input type="number" id="player-idle-timeout" ivalue=0 class="property-button"></input>
+                </div>
+                <div class="advanced">
+                    <h3>Prevent proxy connections</h3>
+                    <btnToggle id="prevent-proxy-connections" class="property-button"></btnToggle>
+                </div>
+                <div class="advanced">
+                    <h3>Snooper enabled</h3>
+                    <btnToggle on id="snooper-enabled" class="property-button"></btnToggle>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div id="server-properties-parent">
+                    <div>
+                        <thing>
+                            <pre><code class="properties" id="server-properties">Loading...</code></pre>
+                        </thing>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
-        <script src="main.js"></script>
-    </body>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    
+    <script src="main.js"></script>
+</body>
 </html>
